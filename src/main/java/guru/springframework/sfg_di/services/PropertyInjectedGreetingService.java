@@ -3,13 +3,13 @@ package guru.springframework.sfg_di.services;
 import org.springframework.stereotype.Service;
 
 /**
- * Created on 06/26/2025 by Jesse H.
+ * Created on 06/27/2025
  */
 
 @Service
-public class GreetingServiceImpl implements GreetingService {
+public class PropertyInjectedGreetingService implements GreetingService {
     @Override
     public String sayGreeting() {
-        return "Hello World";
+        return "Hello World - Property";
     }
 }
