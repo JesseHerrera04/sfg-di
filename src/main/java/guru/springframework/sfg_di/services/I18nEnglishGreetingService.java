@@ -1,14 +1,9 @@
 package guru.springframework.sfg_di.services;
 
-import org.springframework.context.annotation.Profile;
-import org.springframework.stereotype.Service;
-
 /**
  * Created on 06/30/2025 by Jesse H.
  */
 
-@Profile("EN")
-@Service("i18nService")
 public class I18nEnglishGreetingService implements GreetingService {
 
     @Override
