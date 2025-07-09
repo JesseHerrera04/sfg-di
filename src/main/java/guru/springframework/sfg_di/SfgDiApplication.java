@@ -1,6 +1,7 @@
 package guru.springframework.sfg_di;
 
 import guru.springframework.sfg_di.controllers.*;
+import guru.springframework.sfg_di.datasource.FakeDataSource;
 import guru.springframework.sfg_di.services.PrototypeBean;
 import guru.springframework.sfg_di.services.SingletonBean;
 import org.springframework.boot.SpringApplication;
@@ -54,6 +55,11 @@ public class SfgDiApplication {
 		System.out.println(prototypeBean1.getMyScope());
 		PrototypeBean prototypeBean2 = ctx.getBean(PrototypeBean.class);
 		System.out.println(prototypeBean2.getMyScope());
+
+		FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
+		System.out.println(fakeDataSource.getUsername());
+		System.out.println(fakeDataSource.getPassword());
+		System.out.println(fakeDataSource.getJdbcurl());
 	}
 
 }
